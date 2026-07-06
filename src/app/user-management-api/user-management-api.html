@@ -1,0 +1,278 @@
+<h1 class="project-title">
+    <span class="accent-symbol"><</span>
+        User Management API
+    <span class="accent-symbol">/></span>
+</h1>
+
+
+<div class="project-overview">
+    <h2 class="section-title titles">
+        Overview    <!--DECO NEEDED-->
+    </h2>
+
+    <p class="section-text side-line">
+        A RESTful API built with Laravel for user authentication, authorization and account management.
+        The project demonstrates secure authentication, role-based access control and API development best practices.
+    </p>
+</div>
+
+
+<div class="project-badges">
+    <span class="project-badge">Laravel 12</span>
+    <span class="project-badge">PHP</span>
+    <span class="project-badge">REST API</span>
+    <span class="project-badge">Authentication</span>
+    <span class="project-badge">Authorization</span>
+    <span class="project-badge">Middleware</span>
+    <span class="project-badge">MySQL</span>
+</div>
+
+
+<div class="key-features row">
+    <div class="col">
+        <h3 class="features-title titles">Key Features</h3> <!--DECO NEEDED-->
+
+        <ul class="feature-list">
+            <li><i class="bi bi-person-plus"></i> User registration</li>
+            <li><i class="bi bi-box-arrow-in-right"></i> User login/logout</li>
+            <li><i class="bi bi-key"></i> Token-based authentication</li>
+            <li><i class="bi bi-shield-lock"></i> Role-based authorization</li>
+            <li><i class="bi bi-people"></i> User CRUD operations</li>
+            <li><i class="bi bi-check2-square"></i> Request validation</li>
+            <li><i class="bi bi-lock"></i> Password hashing</li>
+            <li><i class="bi bi-trash"></i> Soft deletes</li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="technical">
+    <h3 class="titles">Technical Highlights</h3>
+
+    <div class="technical-content">
+        <div class="registration">
+            <h4>1. User Registration</h4>
+            
+            <div class="row">
+                <div class="col screenshots">
+                    <img class="imgs" src="register.png" alt="">
+                </div>
+    
+    
+                <div class="purpose col">
+                    <h4>Purpose</h4>
+    
+                    <p class="explanation side-line">
+                        Creates new user accounts after validating the incoming data.
+                    </p>
+    
+                    <div class="flow-diagram">
+                        <div class="flow-step">User Input</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">Validation</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">Password Hashing</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">User Created</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+        <div class="login whitespace">
+            <h4>2. User Authentication (Login)</h4>
+            
+            <div class="row">
+                <div class="purpose col">
+                    <h4>Purpose</h4>
+                    
+                    <p class="explanation side-line">
+                        Validates user credentials, verifies the password against the stored hash and generates a Sanctum access token for authenticated API requests.
+                    </p>
+                    
+                    <div class="flow-diagram">
+                        <div class="flow-step">Email & Password</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">Find User</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">Verify Password</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">Generate Sanctum Token</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">Login Successful</div>
+                    </div>
+                </div>
+                
+                
+                <div class="col screenshots">
+                    <img class="imgs" src="login.png" alt="">
+                </div>
+            </div>
+        </div>
+    
+        <div class="routes whitespace">
+            <h4>3. Protected Routes</h4>
+    
+            <div class="row">
+                <div class="col screenshots">
+                    <img class="imgs" src="protected-routes.png" alt="">
+                </div>
+    
+    
+                <div class="purpose col">
+                    <h4>Purpose</h4>
+    
+                    <p class="explanation side-line">
+                        Protects sensitive endpoints using Laravel Sanctum authentication, ensuring that only authenticated users can access restricted resources.
+                    </p>
+    
+                    <div class="flow-diagram">
+                        <div class="flow-step">API Request</div>
+                        <div class="flow-arrow">↓</div>
+    
+                        <div class="flow-step">Sanctum Token</div>
+                        <div class="flow-arrow">↓</div>
+    
+                        <div class="flow-step">Authenticate User</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">Access Protected Route</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="auth whitespace">
+        <h4>4. Role-Based Authorization</h4>
+
+        <div class="row">
+            <div class="purpose col">
+                <h4>Purpose</h4>
+
+                <p class="explanation side-line">
+                    Uses custom middleware to verify user roles and restrict access to endpoints based on permissions.
+                </p>
+
+                <div class="flow-diagram">
+                    <div class="flow-step">Authenticated User</div>
+                    <div class="flow-arrow">↓</div>
+                    
+                    <div class="flow-step">Role Middleware</div>
+                    <div class="flow-arrow">↓</div>
+
+                    <div class="flow-step">Check User Role</div>
+                    <div class="flow-arrow">↓</div>
+                    
+                    <div class="flow-step">Access Granted / Forbidden</div>
+                </div>
+            </div>
+
+
+            <div class="col screenshots">
+                <img class="imgs" src="authentication.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<hr class="custom-line">
+
+
+<div class="api-endpoints">
+    <h3 class="titles">API Endpoints</h3>
+
+    <table class="endpoint-table">
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Endpoint</th>
+                <th>Access</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><span class="method post">POST</span></td>
+                <td>/register</td>
+                <td>Public</td>
+                <td>Register a new user account.</td>
+            </tr>
+
+            <tr>
+                <td><span class="method post">POST</span></td>
+                <td>/login</td>
+                <td>Public</td>
+                <td>Authenticate a user and generate an access token.</td>
+            </tr>
+
+            <tr>
+                <td><span class="method post">POST</span></td>
+                <td>/logout</td>
+                <td>Authenticated</td>
+                <td>Revoke the current access token.</td>
+            </tr>
+
+            <tr>
+                <td><span class="method get">GET</span></td>
+                <td>/users</td>
+                <td>Admin</td>
+                <td>Retrieve all users.</td>
+            </tr>
+
+            <tr>
+                <td><span class="method get">GET</span></td>
+                <td>/users/&#123;id&#125;</td>
+                <td>Admin</td>
+                <td>Retrieve a specific user.</td>
+            </tr>
+
+            <tr>
+                <td><span class="method post">POST</span></td>
+                <td>/users</td>
+                <td>Admin</td>
+                <td>Create a new user.</td>
+            </tr>
+
+            <tr>
+                <td><span class="method put">PUT</span></td>
+                <td>/users/&#123;id&#125;</td>
+                <td>Admin</td>
+                <td>Update user information.</td>
+            </tr>
+
+            <tr>
+                <td><span class="method delete">DELETE</span></td>
+                <td>/users/&#123;id&#125;</td>
+                <td>Admin</td>
+                <td>Soft delete a user account.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<hr class="custom-line">
+
+
+<div class="learned-things">
+    <h3 class="titles">Key Takeaways</h3>
+
+    <ul class="learned-list">
+        <li>REST API design</li>
+        <li>Eloquent ORM</li>
+        <li>Database relationships</li>
+        <li>Clean project structure</li>
+        <li>Performance optimization (eager loading)</li>
+    </ul>
+</div>

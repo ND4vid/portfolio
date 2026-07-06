@@ -1,0 +1,269 @@
+<h1 class="project-title">
+    <span class="accent-symbol"><</span>
+        Processor Inventory API
+    <span class="accent-symbol">/></span>
+</h1>
+
+
+<div class="project-overview">
+    <h2 class="section-title titles">
+        Overview    <!--DECO NEEDED-->
+    </h2>
+
+    <p class="section-text side-line">
+        RESTful API built with Laravel for managing processor inventory.
+        The application provides complete CRUD functionality, input validation,
+        and relational database management using Eloquent ORM, serving as a scalable foundation for inventory-based systems.
+    </p>
+</div>
+
+
+<div class="project-badges">
+    <span class="project-badge">Laravel 12</span>
+    <span class="project-badge">PHP</span>
+    <span class="project-badge">REST API</span>
+    <span class="project-badge">MySQL</span>
+    <span class="project-badge">Eloquent ORM</span>
+    <span class="project-badge">CRUD</span>
+    <span class="project-badge">Database Relationships</span>
+</div>
+
+
+<div class="key-features row">
+    <div class="col">
+        <h3 class="features-title titles">Key Features</h3> <!--DECO NEEDED-->
+
+        <ul class="feature-list">
+            <li><i class="bi bi-person-plus"></i> Manage processor records through a RESTful API</li>
+            <li><i class="bi bi-box-arrow-in-right"></i> Perform complete CRUD operations</li>
+            <li><i class="bi bi-key"></i> Associate processors with CPU brands using Eloquent relationships</li>
+            <li><i class="bi bi-shield-lock"></i> Validate incoming request data before database operations</li>
+            <li><i class="bi bi-people"></i> Return structured JSON responses with appropriate HTTP status codes</li>
+            <li><i class="bi bi-check2-square"></i> Seed the database with sample data for testing and development</li>
+            <li><i class="bi bi-lock"></i> Follow Laravel's MVC architecture and RESTful conventions</li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="technical">
+    <h3 class="titles">Technical Highlights</h3>
+
+    <div class="technical-content">
+        <div class="eloquent">
+            <h4>Eloquent Relationships</h4>
+            
+            <div class="row">
+                <div class="col screenshots">
+                    <img class="imgs" src="eloquent-relationship1.png" alt="">
+                </div>
+    
+    
+                <div class="purpose col">
+                    <h4>Purpose</h4>
+    
+                    <p class="explanation side-line">
+                        Creates new user accounts after validating the incoming data.
+                    </p>
+    
+                    <div class="flow-diagram">
+                        <div class="flow-step">User Input</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">Validation</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">Password Hashing</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">User Created</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="request whitespace">
+            <h4>Request Validation</h4>
+            
+            <div class="row">
+                <div class="purpose col">
+                    <h4>Purpose</h4>
+                    
+                    <p class="explanation side-line">
+                        Ensures only valid processor data is stored in the database.
+                    </p>
+                    
+                    <div class="flow-diagram">
+                        <div class="flow-step">Client Request</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">Validation</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">Database</div>
+                    </div>
+                </div>
+
+
+                <div class="col screenshots">
+                    <img class="imgs" src="request-validation.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="rest-api-response whitespace">
+            <h4>REST API Response</h4>
+            
+            <div class="row">
+                <div class="col screenshots">
+                    <img class="imgs" src="json-response.png" alt="">
+                </div>
+    
+    
+                <div class="purpose col">
+                    <h4>Purpose</h4>
+    
+                    <p class="explanation side-line">
+                        Creates a new processor and returns a structured JSON response with the appropriate HTTP status code.
+                    </p>
+    
+                    <div class="flow-diagram">
+                        <div class="flow-step">POST Request</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">Create Record</div>
+                        <div class="flow-arrow">↓</div>
+                        
+                        <div class="flow-step">JSON Response (201)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="request whitespace">
+            <h4>Eager Loading</h4>
+            
+            <div class="row">
+
+                <div class="purpose col">
+                    <h4>Purpose</h4>
+                    
+                    <p class="explanation side-line">
+                        Retrieves processors together with their related CPU brands in a single query, improving performance and avoiding unnecessary database requests.
+                    </p>
+                    
+                    <div class="row comparison">
+                        <div class="eager-comparison col">
+                            <div class="comparison-box">
+                                <h5>Without Eager Loading</h5>
+                                
+                                <div class="comparison-flow">
+                                    <div class="flow-box">Processors</div>
+                                    <div class="flow-arrow">↓</div>
+                                    
+                                    <div class="flow-box">Query Brand #1</div>
+                                    <div class="flow-arrow">↓</div>
+                                    
+                                    <div class="flow-box">Query Brand #2</div>
+                                    <div class="flow-arrow">↓</div>
+                                    
+                                    <div class="flow-box">...</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-box col">
+                            <h5>With Eager Loading</h5>
+                            
+                            <div class="comparison-flow">
+                                <div class="flow-box">Processors + Brands</div>
+                                <div class="flow-arrow">↓</div>
+                    
+                                <div class="flow-box success">
+                                    Single Optimized Query
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                    
+                </div>
+
+
+                <div class="col screenshots">
+                    <img class="imgs" src="eager-loading.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+<hr class="custom-line">
+
+
+<div class="api-endpoints">
+    <h3 class="titles">API Endpoints</h3>
+
+    <table class="endpoint-table">
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Endpoint</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><span class="method get">GET</span></td>
+                <td>/processors</td>
+                <td>Retrieve all processors with their associated CPU brands.</td>
+            </tr>
+
+            <tr>
+                <td><span class="method get">GET</span></td>
+                <td>/processors/&#123;id&#125;</td>
+                <td>Retrieve a specific processor (with its associated CPU brand).</td>
+            </tr>
+
+            <tr>
+                <td><span class="method post">POST</span></td>
+                <td>/processors</td>
+                <td>Create a new processor.</td>
+            </tr>
+
+            <tr>
+                <td><span class="method put">PUT</span></td>
+                <td>/processors/&#123;id&#125;</td>
+                <td>Update an existing processor.</td>
+            </tr>
+
+            <tr>
+                <td><span class="method delete">DELETE</span></td>
+                <td>/processors/&#123;id&#125;</td>
+                <td>Delete a processor.</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
+
+<hr class="custom-line">
+
+
+<div class="learned-things">
+    <h3 class="titles">Key Takeaways</h3>
+
+    <ul class="learned-list">
+        <li>REST API development</li>
+        <li>Token-based authentication using Sanctum</li>
+        <li>Role-based access control implementation</li>
+        <li>Request validation and error handling</li>
+        <li>Working with Eloquent ORM and MySQL</li>
+        <li>MVC architecture principles</li>
+    </ul>
+</div>

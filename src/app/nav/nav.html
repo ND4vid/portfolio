@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg custom-navbar" data-bs-theme="dark">
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills" routerLinkActive="active-link">Backend skills</a>
+                </li>
+                
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Featured projects</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" routerLink="user-management-api" routerLinkActive="active-link">
+                                User Management API
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a class="dropdown-item" routerLink="processor-inventory-api" routerLinkActive="active-link">Processor-Inventory API</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" routerLink="after-school" routerLinkActive="active-link">After School</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

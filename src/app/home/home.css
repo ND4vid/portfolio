@@ -1,0 +1,245 @@
+#intro {
+    font-size: large;
+}
+
+#intro h3 {
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: x-large;
+}
+
+.portfolio-title {
+    font-size: 64px;
+    font-weight: 800;
+
+    background: linear-gradient(
+        135deg,
+        rgb(0, 150, 150),
+        rgb(0, 200, 200),
+        rgb(0, 250, 250)
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 40px;
+    font-weight: 700;
+
+    margin-bottom: 75px;
+
+    background: linear-gradient(
+        135deg,
+        rgb(0, 150, 150),
+        rgb(0, 200, 200),
+        rgb(0, 250, 250)
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+    text-align: center;
+}
+
+.custom-title-line {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right,
+        rgba(46, 46, 255, 0.4),
+        rgba(76, 76, 255, 0.8),
+        rgba(106, 106, 255, 1),
+        rgba(76, 76, 255, 0.8),
+        rgba(46, 46, 255, 0.4)
+    );
+
+    opacity: 50%;
+
+    width: 500px;
+
+    margin: 10px auto;
+}
+
+
+h2 {
+    margin-top: 75px;
+    margin-bottom: 50px;
+}
+
+.side-line {
+    border-left: 3px solid rgb(0, 200, 200);
+    padding-left: 10px;
+}
+
+li {
+    list-style-type: square;
+}
+
+
+    /*Backend skills*/
+
+.skills-card {
+    width: 100%;
+    background-color: rgb(18, 18, 18);
+    border: 1px solid rgb(40, 40, 40);
+    border-radius: 18px;
+
+    padding: 24px;
+
+    transition: 0.2s ease;
+}
+
+.skills-card:hover {
+    transform: translateY(-3px);
+    border-color: rgb(70, 70, 70);
+}
+
+.skills-card h3 {
+    margin-bottom: 20px;
+
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: 40px;
+    
+    gap: 10px;
+}
+
+.skill-badge {
+    background-color: rgb(28, 28, 28);
+
+    border: 1px solid rgb(45, 45, 45);
+    border-radius: 999px;
+
+    padding: 7px 14px;
+
+    font-size: 14px;
+    color: rgb(232, 232, 232);
+
+    transition: 0.2s ease;
+}
+
+.skill-badge:hover {
+    background-color: rgb(40, 40, 40);
+    border-color: rgb(70, 70, 70);
+}
+
+
+.custom-line {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right,
+        rgb(64, 64, 64),
+        rgb(100, 100, 100),
+        #d6d6d6,
+        rgb(100, 100, 100),
+        rgb(64, 64, 64)
+    );
+
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+
+                                            /*Featured projects*/
+
+.projects-title {
+    font-size: 38px;
+    font-weight: 700;
+
+    margin-bottom: 35px;
+
+    color: white;
+}
+
+.accent-symbol {
+    color: rgb(0, 200, 200);
+    text-shadow:
+        0 0 10px rgb(120,120,255);
+}
+
+.accent-symbol2 {
+    color: rgb(0, 200, 200);
+    text-shadow:
+        0 0 10px rgb(0, 200, 200);
+}
+
+
+.project-card {
+    width: 100%;
+    padding: 12px;
+    
+}
+
+.project-badge:hover {
+    transform: translateY(-3px);
+    border-color: rgb(70, 70, 70);
+
+    background-color: rgb(40, 40, 40);
+    border-color: rgb(70, 70, 70);
+}
+
+.project-badge {
+    background-color: rgb(28, 28, 28);
+
+    border: 1px solid rgb(45, 45, 45);
+    border-radius: 999px;
+
+    padding: 7px 14px;
+    margin: 4px;
+
+    font-size: 14px;
+    color: rgb(232, 232, 232);
+
+    transition: 0.2s ease;
+}
+
+.projects:hover {
+    transform: translateY(-3px);
+    border-color: rgb(70, 70, 70);
+}
+
+.project-card img {
+    width: 90%;
+    margin-top: 8px;
+}
+
+.projects {
+    flex: 1;
+    min-width: 300px;
+
+    background-color: rgb(18, 18, 18);
+
+    border: 1px solid rgb(40, 40, 40);
+    border-radius: 18px;
+
+    padding: 20px;
+    transition: 0.2s ease;
+}
+
+.project-row {
+    gap: 25px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.projects {
+    display: block;
+    cursor: pointer;
+}
