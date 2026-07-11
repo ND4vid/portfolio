@@ -44,25 +44,223 @@
     <h3 class="titles">Technical Highlights</h3>
 
     <div class="technical-content">
-        <h4 class="titles methods">CountSteps Method</h4>
         
-        <div class="row">
+        <div class="part1">
+            <h4 class="titles">CountSteps Method</h4>
+            
+            <div class="technical-content">
+                
+                <div class="inner-content side-line">
+                    <h4>Local Variables</h4>
+                    
+                    <div class="row">
+                        <div class="col screenshots">
+                            <img class="imgs" src="CountSteps-variables.png" alt="">
+                        </div>
+                        
+                        
+                        <div class="purpose col">
+                            <h4>Purpose</h4>
+                            
+                            <p class="purpose">
+                                Declares the necessary local variables to store the information processed by the method.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="flow-arrow">↓</div>
+                
+                
+                <div class="inner-content side-line">
+                    <h4>The Method</h4>
+                    
+                    <div class="row">
+                        <div class="col screenshots">
+                            <img class="imgs" src="CountSteps().png" alt="">
+                        </div>
+                        
+                        
+                        <div class="purpose col">
+                            <h4>Purpose</h4>
+                            
+                            <p class="purpose">
+                                Tracks the player's movement by accumulating traveled distance between frames. 
+                                When a certain distance threshold is reached, it increments the step counter.
+                            </p>
+                            
+                            <p>The method also triggers synchronized footstep audio after each step.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="flow-arrow">↓</div>
+                
+                
+                <div class="inner-content side-line">
+                    <h4>Method Call</h4>
+                    
+                    <div class="row">
+                        <div class="col screenshots">
+                            <img class="imgs" src="method-in-update().png" alt="">
+                        </div>
+                        
+                        
+                        <div class="purpose col">
+                            <h4>Purpose</h4>
+                            
+                            <p class="purpose">
+                                The method is executed every frame from Update(), continuously tracking adn updateing steps in real time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="col screenshots">
-                <img class="imgs" src="register.png" alt="">
-            </div>
-    
-    
-            <div class="purpose col">
-                <h4>Purpose</h4>
-
-                <p class="explanation side-line">
-                    Creates new user accounts after validating the incoming data.
-                </p>
+                
             </div>
 
         </div>
+
+
+        <hr class="custom-line">
+
+
+        <div class="part2">
+            <h4 class="titles">API Workflow</h4>
+
+            <div class="technical-content">
+
+                <div class="inner-content api-step1">
+                    <h4>1. API Configuration</h4>
+                    
+                    <div class="row">
+                        <div class="col screenshots">
+                            <img class="imgs" src="1.api-config.png" alt="">
+                        </div>
+                        
+                        
+                        <div class="purpose col">
+                            <h4>Purpose</h4>
+                            
+                            <p class="purpose">
+                                Configures the API endpoint and the variables required for transmitting gameplay statistics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="whitespace"></div>
+
+                <div class="inner-content api-step2">
+                    <h4>2. Step Counter Initialization</h4>
+                    
+                    <div class="row">
+                        <div class="col screenshots">
+                            <img class="imgs" src="2.initialization.png" alt="">
+                        </div>
+                        
+                        
+                        <div class="purpose col">
+                            <h4>Purpose</h4>
+                            
+                            <p class="purpose">
+                                Initializes the variables required to track the player's movement during gameplay.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="whitespace"></div>
+
+                <div class="inner-content api-step3">
+                    <h4>3. Step Counting Logic</h4>
+                    
+                    <div class="row">
+                        <div class="col screenshots">
+                            <img class="imgs" src="3.CountSteps().png" alt="">
+                        </div>
+                        
+                        
+                        <div class="purpose col">
+                            <h4>Purpose</h4>
+                            
+                            <p class="purpose">
+                                Monitors player movement and updates the step count based on the travelled distance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="whitespace"></div>
+
+                <div class="inner-content api-step4">
+                    <h4>4. Request Data Model</h4>
+                    
+                    <div class="row">
+                        <div class="col screenshots">
+                            <img class="imgs" src="4.api-data-format.png" alt="">
+                        </div>
+                        
+                        
+                        <div class="purpose col">
+                            <h4>Purpose</h4>
+                            
+                            <p class="purpose">
+                                Defines the JSON structure used to transfer gameplay statistics to the backend.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="whitespace"></div>
+                
+                <div class="inner-content api-step5">
+                    <h4>5. Automatic Data Synchronization</h4>
+                    
+                    <div class="row">
+                        <div class="col screenshots">
+                            <img class="imgs" src="5.data-sync.png" alt="">
+                        </div>
+                        
+                        
+                        <div class="purpose col">
+                            <h4>Purpose</h4>
+                            
+                            <p class="purpose">
+                                Periodically triggers the data transmission process using a Unity Coroutine.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="whitespace"></div>
+
+                <div class="inner-content api-step6">
+                    <h4>6. JSON Serialization & API Request</h4>
+                    
+                    <div class="row">
+                        <div class="col screenshots">
+                            <img class="imgs" src="6.json-serialization-and-api-request.png" alt="">
+                        </div>
+                        
+                        
+                        <div class="purpose col">
+                            <h4>Purpose</h4>
+                            
+                            <p class="purpose">
+                                Converts the collected statistics into JSON, sends them to the Laravel REST API via an HTTP POST request, and handles the server response.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
+</div>
 
 
 <hr class="custom-line">

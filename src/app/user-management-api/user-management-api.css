@@ -66,20 +66,22 @@
 }
 
 
+
 .side-line {
     border-left: 3px solid rgb(0, 200, 255);
     padding-left: 10px;
 }
 
 
-.features-list {
-    margin-left: 1rem;
-}
 
 .feature-list {
     list-style-type: none;
 
     font-size: 24px;
+}
+
+.feature-list i {
+    margin-right: 7px;
 }
 
 
@@ -206,3 +208,5 @@
     font-family: "bootstrap-icons";
     content: "\F271   "; /* check2 ikon */
 }
+
+

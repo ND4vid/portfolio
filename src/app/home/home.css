@@ -243,3 +243,9 @@ li {
     display: block;
     cursor: pointer;
 }
+
+.titles {
+    vertical-align: middle;
+
+    flex: 1;
+}
