@@ -107,10 +107,14 @@
     transition: 0.5s;
 
     width: 100%;
+
+    
 }
 
 .imgs:hover {
     transform: scale(1.05);
+
+    
 }
 
 
@@ -192,7 +196,7 @@
 
 
 .learned-things {
-    font-size: larger;
+    font-size: x-large;
 }
 
 .learned-list li {

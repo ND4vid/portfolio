@@ -1,6 +1,11 @@
 .project-cover {
-  height: 220px;
+  height: 260px;
+  
+  
+}
 
-  background-repeat: no-repeat;
-  background-position: center;
+@media (max-width: 768px) {
+    .project-cover {
+        height: 100px;
+    }
 }

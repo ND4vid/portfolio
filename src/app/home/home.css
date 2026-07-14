@@ -245,7 +245,6 @@ li {
 }
 
 .titles {
-    vertical-align: middle;
-
-    flex: 1;
+    display: flex;
+    align-items: center;
 }
